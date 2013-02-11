@@ -1,0 +1,12 @@
+#define UNIFORM 1
+#define ANNULUS 2
+#define ARITH 3
+#define BALL 4
+#define CLUSNORM 5
+#define CUBEDIAM 6
+#define CUBEEDGE 7
+#define CORNERS 8
+#define GRID 9
+#define NORMAL 10
+#define SPOKES 11
+#define HENON 12
