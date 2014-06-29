@@ -61,8 +61,8 @@ while(r>l) {
     t=a[i]; a[i] = a[j]; a[j]=t;
   }
   t=a[i]; a[i] = a[r]; a[r]=t;
-  if (a[i]>=k) r=i-1;
-  if (a[i]<=k) l=i+1;
+  if (a[i]>=(float)k) r=i-1;
+  if (a[i]<=(float)k) l=i+1;
 }
 
 }
@@ -95,7 +95,7 @@ IndexRec *S;
     while (D!=NULL) {
      if (P->Index!=D->Index) {
         m++;
-        mu = sqrt(EuclidDist2(Points,P->Index,Points[D->Index],dimension));
+        mu = (float)sqrt(EuclidDist2(Points,P->Index,Points[D->Index],dimension));
         dist[m] = mu/(1.0+mu); 
       }
      D=D->Next;
@@ -150,17 +150,17 @@ IndexRec *Index,*prev,*next,*L,*R,*LPrev,*RPrev;
     return(p);
   }  /* unroll recursion by one step */
 
-  /* NEWTREE(p); global weirds -SCL */
-  p = (VPTreeNode*)malloc(sizeof(VPTreeNode));
+   NEWTREE(p); /*global weirds -SCL */
+  /*  p = (VPTreeNode*)malloc(sizeof(VPTreeNode)); */
   Index=Select_vp(Points,S,numPts,dimension,&mu);
 
   p->Index=Index->Index;
   p->Mu=mu;
 
   prev=S; next=S->Next;
-  /*  NEWINDEX(L);NEWINDEX(R); global and ugly weirds! */
-  L = (IndexRec *)malloc(sizeof(IndexRec));
-  R = (IndexRec *)malloc(sizeof(IndexRec));
+    NEWINDEX(L);NEWINDEX(R); /*global and ugly weirds! */
+  /* L = (IndexRec *)malloc(sizeof(IndexRec));*/
+  /*R = (IndexRec *)malloc(sizeof(IndexRec));*/
   LPrev=L;RPrev=R; nl=0;nr=0;
   while (next!=NULL) {
     if (next->Index!=Index->Index) {

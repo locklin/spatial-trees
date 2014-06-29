@@ -68,8 +68,8 @@ test: test.o fileoper.o ranger.so
 	$(COMPILER) test.o fileoper.o libranger.so.1 -lm -L./libranger.so.1 -o test 
 
 
-voronoi/VorMain.o: voronoi/VorMain.c voronoi/edgelist.c voronoi/geometry.c voronoi/heap.c voronoi/memory.c voronoi/output.c voronoi/voronoi.c
-	$(COMPILER) $(COPTS) voronoi/VorMain.o voronoi/VorMain.c
+#voronoi/VorMain.o: voronoi/VorMain.c voronoi/edgelist.c voronoi/geometry.c voronoi/heap.c voronoi/memory.c voronoi/output.c voronoi/voronoi.c
+#	$(COMPILER) $(COPTS) voronoi/VorMain.o voronoi/VorMain.c
 
 
 # I don't know if this is good for anything yet

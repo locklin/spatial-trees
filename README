@@ -1,25 +1,28 @@
-Original code by Steven Skiena and Michael Murphy, explicitly put in "public domain" 
-at request on 10-28-2011
+Original code by Steven Skiena and Michael Murphy, explicitly put in "public 
+domain"  at request on 10-28-2011
 Modified for encapsulation into a library by Scott Locklin
 
 zlib license
 
-Ranger was a cool-looking demonstration of how spatial trees work, and how they break
-down in higher dimensions; aka, everything in high dimensions is pretty close to everything
-else. I've looted the code, because there aren't enough spatial trees around which are
-written in good old C. If I can get these things to work properly, I'll build hooks in 
-J and Lush (and possibly R, if there are any advantages of, say, VPtrees over libANN).
+Ranger was a cool-looking demonstration of how spatial trees work, and how they 
+break down in higher dimensions; aka, everything in high dimensions is pretty 
+close to everything else. I've looted the code, because there aren't enough 
+spatial trees around which are written in good old C. If I can get these things 
+to work properly, I'll build hooks in J and Lush (and possibly R, if there are any 
+advantages of, say, VPtrees over libANN).
 
-libANN and libFLANN are good libraries for this sort of thing, but they are also large and
-complex, making them difficult to modify. These trees are simple enough to understand in
-an afternoon, and easier to fiddle with. I also prefer the simplicity of C.
+libANN and libFLANN are good libraries for this sort of thing, but they are also 
+large and complex, making them difficult to modify. These trees are simple 
+enough to understand in an afternoon, and easier to fiddle with. I also prefer 
+the simplicity of C.
 
-If I can get them working properly, I plan to modify them heavily for readability and 
-performance.
+If I can get them working properly, I plan to modify them heavily for readability 
+and performance.
 
 Presently optkd is tested. It's weird, and contains icky globals, but it works
 Sproull is tested and doesn't work. Same with VP and naivekd. 
-VP has a memory issue, and naivekd has a weird query syntax that makes no sense to me.
+VP has a memory issue, and naivekd has a weird query syntax that makes no 
+sense to me.
 
 Naive works ;-)
 
@@ -28,3 +31,10 @@ http://www.cs.sunysb.edu/~algorith/implement/ranger/distrib/
 
 With documentation from the famous book here:
 http://www.cs.sunysb.edu/~algorith/
+
+The test function should uncomment out the various other tree examples
+if you want to work on them. Sample data is kept in data/
+
+Not sure if I will continue to work on these. splint's output on these files
+yields 410 code warnings! While the core logic is sound, it seemed to be whipped
+off too quickly to be maintainable. 

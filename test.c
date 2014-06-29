@@ -48,9 +48,9 @@ float **Create_Points_Array(n,d)
 /*									       */
 /*******************************************************************************/
 
-int
-  n,   /* number of points */
-  d;   /* dimension of the number of points */
+int 
+     n,   /* number of points */
+     d;   /* dimension of the number of points */
 
 {
   int i;
@@ -75,7 +75,7 @@ int main(int argc, char* argv[]) {
   /* VPTreeNode *tree; */
 
   if((argc==1)|(argc>4)) {
-    printf("usage: ./test filename\n./test nn filename\n./test selected nn filename\n");
+    printf("usage: ./test filename\n./test nn filename\n./test selected nn filename\ndefaults to selected=10,nn=2");
     return(-1);
   } else {
     select=10;
@@ -86,9 +86,9 @@ int main(int argc, char* argv[]) {
       filename=argv[2];
       nn=atoi(argv[1]);
     } else if (argc==4) {
-      filename=argv[3];
-      nn=atoi(argv[2]);
       select=atoi(argv[1]);
+      nn=atoi(argv[2]);
+      filename=argv[3];
     }
 
     fpoints = ReadInputFile(filename,&dim,&num);
