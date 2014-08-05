@@ -1,8 +1,14 @@
+Not sure if I will continue to work on these. splint's output on these files
+yields 410 code warnings! While the core logic is sound, it seemed to be whipped
+off too quickly to be maintainable. Leaving them up for anyone who wants to fiddle
+with them.
+
 Original code by Steven Skiena and Michael Murphy, explicitly put in "public 
 domain"  at request on 10-28-2011
 Modified for encapsulation into a library by Scott Locklin
 
 zlib license
+
 
 Ranger was a cool-looking demonstration of how spatial trees work, and how they 
 break down in higher dimensions; aka, everything in high dimensions is pretty 
@@ -35,6 +41,3 @@ http://www.cs.sunysb.edu/~algorith/
 The test function should uncomment out the various other tree examples
 if you want to work on them. Sample data is kept in data/
 
-Not sure if I will continue to work on these. splint's output on these files
-yields 410 code warnings! While the core logic is sound, it seemed to be whipped
-off too quickly to be maintainable. 
